@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasoi Recepies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+           box-sizing: border-box;
+        }
+      /* #navlist{
+            list-style:none ;
+            font-size: 2.2rem;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 10px;
+            padding-right:40px;}*/
+          
+        
+        .container{
+            height: 100%;
+            width: 100%;
+            overflow-x: none;
+            background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            /*display: flex;
+            justify-content: space-around;*/
+        }
+        .navcontainer{
+            width: 100vw;
+           /* background-color: rgb(194, 168, 219);*/
+           background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+           min-height: 80px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           position: relative;
+        }
+        nav{
+            width: 100%;
+        }
+        #navlist{
+            width: 100%;
+            padding: 15px;
+            list-style: none;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #navlogo{
+            font-size: 2.8rem;
+            color: white;
+            
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #navitems{
+           display: flex;
+           gap: 40px;
+           
+        }
+        footer{
+            width: 100%;
+        }
+        .footerbox{
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+       
+            width: 100%;
+          min-height: 40px;
+          
+          text-align: center;
+        }
+        .footerbox p{
+            color: white;
+            font-size: 2rem;
+        }
+        .contentbox{
+            width: 50%;
+            margin: auto;
+          /*  border: solid 1px black;*/
+          background-color: white;
+          
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            padding:3rem;
+            
+            
+            box-shadow: 0px 0px 30px black;
+
+
+        }
+       /* .leftbox{
+            display: flex;
+           
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .leftbox1{
+            display: flex;
+          
+            justify-content: space-between;
+            
+            gap: 20px;
+            padding: 20px;
+            margin: 20px;
+
+        }*/
+        .item{
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+        }
+        .rightbox{
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s linear 0s;
+            box-shadow: 1px 1px 10px black;
+            border-radius: 20px;
+        }
+        .rightbox img{height: 400px;
+            border-radius: 20px;
+            transition: all 0.6s linear 0s;
+            
+
+        }
+        .rightbox:hover{
+            transform: scale(1.1);
+        }
+        .leftbox{
+            display: flex;
+            flex-direction:column ;
+            gap: 20px;
+
+        }
+        .leftbox h2{
+            font-size: 2rem;
+        }
+        .C4{
+            font-size: 1.2rem;
+        }
+        .C5{
+            font-size: 1.2rem;
+        }
+        .C3{
+
+            font-size: 1.2rem;
+        }
+        .C6{
+            font-size: 1.2rem;
+        }
+      /*  .rightbox img{
+            transition: all   0.6s ease-in 0s;
+        }
+        .rightbox :hover{
+            transform: scale(0.9);
+        }
+        .rightbox1 img{
+            transition: all   0.6s ease-in 0s;
+        }
+        .rightbox1 :hover{
+            transform: scale(0.9);}*/
+        .rightbox .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(41, 43, 41);
+            border-radius: 20px;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+             opacity: 0;
+             transition: all 0.3s linear 1s;
+        }
+        .rightbox:hover .overlay{
+            opacity:1;
+        }
+        .rightbox .overlay span{
+            color:white;
+            font-size: 1.2rem;
+        }
+
+      .container h1 {
+  font-family: "Playwrite ES Deco", cursive;
+  font: size 50em;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5%;
+ font-size: 50px;
+  color:palevioletred;
+  
+ 
+  
+}  
+.container p1{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 5%;
+    padding: 20px;
+   
+}
+.sweets{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 30px;
+    padding: 30px;
+    justify-content: space-around;
+   
+
+}
+#sa1{
+    transition: all 1s linear 0.5s;
+}
+#sa1:hover{
+    transform: scale(1.2);
+
+}
+#sa2{
+    transition: all 1s linear 0.5s;
+}
+#sa2:hover{
+    transform: scale(1.2);
+
+}
+#sa3{
+    transition: all 1s linear 0.5s;
+}
+#sa3:hover{
+    transform: scale(1.2);
+
+}
+#sa4{
+    transition: all 1s linear 0.5s;
+}
+#sa4:hover{
+    transform: scale(1.2);
+
+}
+.container h{
+    font-family: "Playwrite ES Deco", cursive;
+  font: size 50em;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+ font-size: 50px;
+  color:palevioletred
+    
+}
+
+  
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <header>
+            <div class="navcontainer">
+            <nav id="navlist">
+              <li><p id="navlogo">Rasoi Recepies</p></li>
+              <li>
+                <div id="navitems">
+                <a href="#"> Home</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                </div>
+               
+               
+            </li>
+            </nav>
+            </div>
+            <p1>Sweets are an essential part of Indian celebrations and rituals, symbolizing joy, prosperity, and hospitality.
+             From festivals like Diwali and Holi to weddings and family gatherings, no occasion is complete without a selection of delicious mithai.
+             The art of making these sweets often involves traditional methods passed down through generations, 
+             reflecting the country's deep cultural heritage and regional diversity.</p1>
+             <br><br>
+             <div class="sweets">
+                <img id="sa1" src="kk.jpeg" alt="" width="200px" height="200px"><img id="sa2"  src="kushi.jpeg" alt="" width="200px" height="200px"><img id="sa3"  src="roshgilla.jpg" alt="" width="200px" height="200px"><img id="sa4"  src="maxresdefault.jpg" alt="" width="200px" height="200px">
+
+
+             </div>
+             
+            <h1>Sweeten Your Dayy!!!</h1>
+        </div></header>
+       
+        
+    <main>
+        <div class="contentbox">
+       <!--Item1-->
+       
+            
+        <section>       
+             <div class="item"><div class="leftbox">
+                <h2>1.Gulab Jamun</h2>
+               <div><h2>Ingredients</h2>
+                    <ol class="C3">
+                     <li>Bread</li>
+                     <li>Milk</li>
+                     <li>Sugar</li>
+                     <li>Oil/Ghee</li>
+                    </ol></div>
+              <div> <h2>Recepie</h2>
+                <ol class="C4">
+                 <li>Syrup: Boil 1 cup sugar + 1 cup water. Add 1/2 tsp cardamom powder. Simmer 5-7 mins. Keep warm.</li>
+                 <li>Dough: Remove crusts from 8 bread slices. Tear into pieces. Add milk gradually to form a soft dough.</li>
+                 <li>Balls: Roll dough into smooth balls.</li>
+                 <li>Fry: Heat oil/ghee on medium, then reduce to low. Fry balls until golden brown. Drain.</li>
+                 <li>Soak: Soak fried balls in warm syrup for 30 mins.</li>
+                 <li>Serve: Garnish with nuts. Serve warm or chilled.
+                </li>
+            </ol>
+                </div></div>
+           
+             
+              <div class="rightbox">
+                <img  src="quick-simple-gulab-jamun.jpg" alt=" Bread Gulab Jamun"width="300px" height="300px">
+           
+            <div class="overlay">
+                <span>Click here to buy</span>
+            </div>
+          </div>
+          </div>
+         </section>
+
+        
+       
+       
+                <section>
+                    <div class="item">
+                       <div class="leftbox">
+                            <h2>2.Barfii</h2>
+                               <div> <h2>Ingredients</h2>
+                                <ol class="C6">
+                                    <li>2 cups milk powder
+                                    </li>
+                                    <li>1 cup condensed milk
+                                    </li>
+                                    <li>1/4 cup milk
+                                    </li>
+                                    <li>1/4 cup ghee
+                                    </li>
+                                    <li>1/2 tsp cardamom powder
+                                    </li>
+                                    <li>2 tbsp chopped nuts</li>
+                                </ol></div>
+                        <div>
+                            <h2>Recepie:</h2>
+                                <ol class="C5">
+                                    <li>Heat Ghee: Melt 1/4 cup ghee.
+                                    </li>
+                                    <li>Mix: Add 1/4 cup milk and 1 cup condensed milk. Stir.
+                                    </li>
+                                    <li>Add Milk Powder: Gradually add 2 cups milk powder, stirring.                                 
+                                      </li>
+                                   <li> Cook: Cook until thick, add 1/2 tsp cardamom powder.
+                                    </li>
+                                    <li> Set: Pour into greased pan, garnish with nuts.
+                                    </li>
+                                    <li>Cool: Refrigerate 1-2 hours, cut and serve.</li>
+                                </ol></div>
+                    </div>
+                        <div class="rightbox">
+                            <img src="barfi.jpeg" alt="" width="300px" height="300px">
+                            <div class="overlay">
+                                <span>Click here to buy</span>
+                            </div>
+                        </div>
+                        </div>
+                       
+                    </section>
+                    <section>
+                        <div class="item">
+                            <div class="leftbox">
+                              <h2> 3. Kaju Katli</h2>
+                                <div>
+                                    <h2>Ingredients</h2>
+                                    <ol>
+                                        <li>
+
+                                             1 cup cashews
+                                            </li>
+                                        <li> 1/2 cup sugar
+                                            </li>
+                                        <li>1/4 cup water
+                                            </li>
+                                        <li>1 tablespoon ghee (optional)
+                                            </li>
+                                        <li> 1/2 teaspoon cardamom powder (optional)</li>
+                                    </ol>
+                                </div>
+                                <div>
+                                    <h2>Recepie</h2>
+                                    <ol>
+                                        <li>
+
+                                     *Grind* 1 cup cashews into a fine powder.
+                                            
+                                          </li>
+                                        <li>*Make syrup*: Heat 1/2 cup sugar and 1/4 cup water until it reaches a one-string consistency.
+                                        
+                                            </li>
+                                        <li>*Add cashew powder* and mix well.
+                                            </li>
+                                        <li>*Cook* on low heat until it forms a dough.
+                                            </li>
+                                        <li>*Roll out* the dough on a greased surface.
+                                        </li>
+                                        <li> *Cut* into diamond shapes.</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            
+                          <div class="rightbox">
+                            <img src="hhhh.jpeg" alt="" width="300px" height="300px">
+                            <div class="overlay">
+                                <span>Click here to buy</span>
+                            </div>
+                          </div>
+                        </div>
+    
+                    </section>
+                    <section>
+                        <div class="item">
+                            <div class="leftbox">
+                                <h2>3.Jalebi</h2>
+
+                            <div>
+                                <h2>Ingredients</h2>
+                                <ol>
+                                    <li>
+
+                                        Flour
+                                        </li>
+                                    <li>Cornstarch
+                                        </li>
+                                    <li> Yogurt
+                                        l</li>
+                                    <li> Baking powder
+                                        </li>
+                                    <li>Water
+                                        </li>
+                                        <li>Sugar
+                                            </li>
+                                        <li> Oil</li>
+                                </ol></div>
+                                <div><h2>Recepies</h2>
+                                    <ol>
+                                        <li>*Batter*: Mix flour, cornstarch, yogurt, and water. Ferment.
+                                            
+                                            
+                                           </li>
+                                        <li>*Syrup*: Boil sugar and water until sticky.
+                                            </li>
+                                        <li> *Fry*: Pipe batter into hot oil, forming spirals.
+                                     </li>
+                                        <li>
+                                            *Soak*: Dip in syrup briefly.
+                                        </li>
+                                    </ol></div>
+                            </div>
+                        
+                        <div class="rightbox">
+                            <img src="jalebi.jpg" alt="" width="300px" height="300px">>
+                            <div class="overlay">
+                                <span>Click here to buy</span>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                    <div class="container">
+                        <h>ThankYou!!!</h>
+                    </div>
+                
+         
+           
+        
+    </main>
+    
+    <footer>
+        <div class="footerbox">
+            <p>
+                Copyright 	&#169; Rasoi Recepies pvt limited 2024 All Right
+            </p>
+        </div>
+    </footer>
+</div>
+    
+    
+</body>
+</html>
